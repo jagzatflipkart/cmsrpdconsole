@@ -1,0 +1,739 @@
+<!--
+[featureset_button_template.mustache.html]
+This is the template for selecting the type of template
+-->
+<script id="featureset_button_template" type="text/html">
+<div class="fs-prvu-template">
+  <div class="form-group">
+    <h6 class="text-info">Select the style of the feature set</h6>
+    {{#prvu_templates}}
+    <div class="col-md-4 featureset-prvu-holder" data-tmplid="{{tmpl_id}}">
+      <span style="background-image:url('{{previewImage}}')" alt="" class="prvu-img-thumbnail"></span>
+      <!--<button class="btn btn-primary btn-lg btn-block"><span>{{title}}</span></button>-->
+    </div>
+    {{/prvu_templates}}
+  </div>
+</div>
+</script>
+<script id="overviewUnit" type="text/html">
+<div class="overviewUnit">
+  <div class="form-group">
+    <input type="text" placeholder="Overview Title" class="form-control overview-title" value="{{title.value}}" />
+    <span class="approvalstatus {{title.status}}" title="{{title.status}}"></span>
+  </div>
+  <div class="descriptionUnit">
+    <div class="form-group">
+      <textarea type="text" placeholder="Overview Description" class="rta form-control overview-description" rows="10">{{description.text.value}}</textarea>
+      <span class="approvalstatus {{description.text.status}}" title="{{description.text.status}}"></span>
+    </div>
+    <div class="form-group feature-holder calloutListHolder">
+      <label>Callout Units</label>
+      <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+      <div class="col-md-11">
+        <div class="row clones-holder callout-unit-holder calloutList">
+          {{#calloutList}}
+          <div class="callout col-md-4 cloneable-unit">
+            <div class="col-md-12">
+              <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+              <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+            </div>
+            <div class="higlight">
+              <div class="col-md-6">
+                <input class="form-control over-large-text input-lg" type="text" placeholder="XX" value="{{highlight.text1.value}}">
+                <span class="approvalstatus {{highlight.text1.status}}"></span>
+              </div>
+              <div class="col-md-6" style="padding-top:15px">
+                <input class="form-control over-small-text input-sm" type="text" placeholder="xx" value="{{highlight.text2.value}}">
+                <span class="approvalstatus {{highlight.text2.status}}"></span>
+                <a href="#" class="close dismiss-item hidden">&times;</a>
+              </div>
+            </div>
+            <div class="col-md-12 subhighlight">
+              <input class="form-control under-text input-sm" type="text" placeholder="subtext">
+              <span class="approvalstatus {{subhighlight.status}}"></span>
+            </div>
+          </div>
+          {{/calloutList}}
+          <div class="callout col-md-4 cloneable-unit">
+            <div class="col-md-12">
+              <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+              <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+            </div>
+            <div class="higlight">
+              <div class="col-md-6">
+                <input class="form-control over-large-text input-lg" type="text" placeholder="XX" value="{{highlight.text1.value}}">
+              </div>
+              <div class="col-md-6" style="padding-top:15px">
+                <input class="form-control over-small-text input-sm" type="text" placeholder="xx" value="{{highlight.text2.value}}">
+                <a href="#" class="close dismiss-item hidden">&times;</a>
+              </div>
+            </div>
+            <div class="col-md-12 subhighlight">
+              <input class="form-control under-text input-sm" type="text" placeholder="subtext">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group mediaUnit feature-holder">
+    <label>Media Units</label>
+    <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+    <div class="row media-unit-holder clones-holder">
+      <div class="col-md-10 mu-link-holder cloneable-unit">
+        {{#media}}
+        <div class="col-md-8">
+          <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" value="{{title.value}}">
+          <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" value="{{url.value}}">
+          <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" value="{{thumbnail.value}}">
+          <span class="mu-link-warning help-block">
+          Please enter a link to flixcart.com or youtube.com
+          </span>
+        </div>
+        <div class="col-md-4 op-btns-holder">
+          <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+        </div>
+        {{/media}}
+        <div class="col-md-8">
+          <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title">
+          <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link">
+          <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link">
+          <span class="mu-link-warning help-block">
+          Please enter a link to flixcart.com or youtube.com
+          </span>
+        </div>
+        <div class="col-md-4 op-btns-holder">
+          <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<!--
+[superTemplate.mustache.html]
+This is the template for entering type 1 feature set
+Title
+Callout | Callout | Callout
+Media Unit      Description
+-->
+<script id="superTemplate" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="type-0">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type0 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title"/>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group feature-holder calloutListHolder">
+            <label>Featureset Callouts</label>
+            <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+            <div class="col-md-11">
+              <div class="row clones-holder callout-unit-holder calloutList">
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                      <a href="#" class="close dismiss-item hidden">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea type="text" placeholder="Featureset Description" class="rta form-control overview-description" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="form-group mediaUnit">
+          <label>Featureset Media</label>
+          <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+          <div class="row media-unit-holder clones-holder">
+            <div class="col-md-10 mu-link-holder cloneable-unit">
+              <div class="col-md-8">
+                <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                <span class="mu-link-warning help-block">
+                Please enter a link to flixcart.com or youtube.com
+                </span>
+              </div>
+              <div class="col-md-4 op-btns-holder">
+                <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        <h5>Features</h5>
+        <a href="#" class="pull-right btn btn-primary clone-unit hidden"><i class="glyphicon glyphicon-plus-sign "></i> Add A Feature</a>
+        <div class="clones-holder">
+          <div class="feature cloneable-unit">
+            <div class="form-group">
+              <input type="text" placeholder="Feature Name" class="form-control overview-title"/>
+            </div>
+            <div class="descriptionUnit">
+              <div class="form-group feature-holder calloutListHolder">
+                <label>Feature Callouts</label>
+                <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+                <div class="col-md-11">
+                  <div class="row clones-holder callout-unit-holder calloutList">
+                    <div class="callout col-md-4 cloneable-unit">
+                      <div class="col-md-12">
+                        <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                        <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                      </div>
+                      <div class="higlight">
+                        <div class="col-md-6">
+                          <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                        </div>
+                        <div class="col-md-6" style="padding-top:15px">
+                          <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                          <a href="#" class="close dismiss-item hidden">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-md-12 subhighlight">
+                        <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea type="text" placeholder="Feature Description" class="rta form-control overview-description" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="form-group mediaUnit">
+              <label>Feature Media</label>
+              <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+              <div class="row media-unit-holder clones-holder">
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<!--
+[featureset_type1.mustache.html]
+This is the template for entering type 1 feature set
+Title
+Callout | Callout | Callout
+Media Unit      Description
+-->
+<script id="featureset_type1" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="featureset_type1">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type1 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title"/>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group feature-holder calloutListHolder">
+            <label>Featureset Callouts</label>
+            <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+            <div class="col-md-11">
+              <div class="row clones-holder callout-unit-holder calloutList">
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                      <a href="#" class="close dismiss-item hidden">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        <h5>Features</h5>
+        <a href="#" class="pull-right btn btn-primary clone-unit hidden"><i class="glyphicon glyphicon-plus-sign "></i> Add A Feature</a>
+        <div class="clones-holder">
+          <div class="feature cloneable-unit">
+            <div class="descriptionUnit">
+              <div class="form-group">
+                <textarea type="text" placeholder="Feature Description" class="rta form-control overview-description" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="form-group mediaUnit">
+              <label>Feature Media</label>
+              <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+              <div class="row media-unit-holder clones-holder">
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<script id="featureset_type1_ms" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="featureset_type1">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type1 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title" value="{{overview.title.value}}"/>
+          <span class="approvalstatus {{overview.title.status}}"></span>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group feature-holder calloutListHolder">
+            <label>Featureset Callouts</label>
+            <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+            <div class="col-md-11">
+              <div class="row clones-holder callout-unit-holder calloutList">
+                {{#overview.description.calloutList}}
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX" value="{{highlight.text1.value}}">
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx" value="{{highlight.text2.value}}">
+                      <a href="#" class="close dismiss-item">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext" value="{{subHighlight.value}}">
+                    <span class="approvalstatus {{highlight.text1.status}}"></span>
+                  </div>
+                </div>
+                {{/overview.description.calloutList}}
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                      <a href="#" class="close dismiss-item hidden">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        <h5>Features</h5>
+        <a href="#" class="pull-right btn btn-primary clone-unit hidden"><i class="glyphicon glyphicon-plus-sign "></i> Add A Feature</a>
+        <div class="clones-holder">
+          {{#features}}
+          <div class="feature cloneable-unit">
+            <div class="descriptionUnit">
+              <div class="form-group">
+                <textarea type="text" placeholder="Feature Description" class="rta form-control overview-description" rows="10">{{description.text.value}}</textarea>
+                <span class="approvalstatus {{description.text.status}}"></span>
+              </div>
+            </div>
+            <div class="form-group mediaUnit">
+              <label>Feature Media</label>
+              <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+              <div class="row media-unit-holder clones-holder">
+                {{#media}}
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" value="{{title.value}}" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" value="{{url.value}}"/>
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" value="{{thumbnail.value}}"/>
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                    <span class="btn btn-default glyphicon glyphicon-trash"></span>
+                  </div>
+                  <span class="approvalstatus {{media.url.status}}"></span>
+                </div>
+                {{/media}}
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/features}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<!--
+[featureset_type2.mustache.html]
+This is the template for entering type 2 feature set
+Title
+Media Unit       Media Unit
+Description      Description
+Media Unit       Media Unit
+Description      Description
+-->
+<script id="featureset_type2" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="featureset_type2">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type1 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title"/>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group feature-holder calloutListHolder hidden">
+            <label>Featureset Callouts</label>
+            <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+            <div class="col-md-11">
+              <div class="row clones-holder callout-unit-holder calloutList">
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                      <a href="#" class="close dismiss-item hidden">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea type="text" placeholder="Featureset Description" class="rta form-control overview-description" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="form-group mediaUnit hidden">
+          <label>Featureset Media</label>
+          <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+          <div class="row media-unit-holder clones-holder">
+            <div class="col-md-10 mu-link-holder cloneable-unit">
+              <div class="col-md-8">
+                <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                <span class="mu-link-warning help-block">
+                Please enter a link to flixcart.com or youtube.com
+                </span>
+              </div>
+              <div class="col-md-4 op-btns-holder">
+                <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        <h5>Features</h5>
+        <a href="#" class="pull-right btn btn-primary clone-unit addFeature"><i class="glyphicon glyphicon-plus-sign "></i> Add A Feature</a>
+        <div class="clones-holder">
+          <div class="feature cloneable-unit">
+            <div class="form-group">
+              <input type="text" placeholder="Feature Name" class="form-control overview-title"/>
+            </div>
+            <div class="descriptionUnit">
+              <div class="form-group feature-holder calloutListHolder hidden">
+                <label>Feature Callouts</label>
+                <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+                <div class="col-md-11">
+                  <div class="row clones-holder callout-unit-holder calloutList">
+                    <div class="callout col-md-4 cloneable-unit">
+                      <div class="col-md-12">
+                        <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                        <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                      </div>
+                      <div class="higlight">
+                        <div class="col-md-6">
+                          <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                        </div>
+                        <div class="col-md-6" style="padding-top:15px">
+                          <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                          <a href="#" class="close dismiss-item hidden">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-md-12 subhighlight">
+                        <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea type="text" placeholder="Feature Description" class="rta form-control overview-description" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="form-group mediaUnit">
+              <label>Feature Media</label>
+              <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+              <div class="row media-unit-holder clones-holder">
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<script id="featureset_type2_ms" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="featureset_type2">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type1 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title" value="{{overview.title.value}}"/>
+          <span class="approvalstatus {{overview.title.status}}"></span>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group">
+            <textarea type="text" placeholder="Featureset Description" class="rta form-control overview-description" rows="10">{{overview.description.text.value}}</textarea>
+            <span class="approvalstatus {{overview.title.status}}"></span>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        <a href="#" class="pull-right btn btn-primary clone-unit addFeature"><i class="glyphicon glyphicon-plus-sign "></i> Add A Feature</a>
+        <h5>Features</h5>
+        <div class="clones-holder">
+          {{#features}}
+          <div class="feature cloneable-unit">
+            <div class="form-group">
+              <input type="text" placeholder="Feature Name" class="form-control overview-title" value="{{title.value}}"/>
+              <span class="approvalstatus {{title.status}}"></span>
+            </div>
+            <div class="descriptionUnit">
+              <div class="form-group">
+                <textarea type="text" placeholder="Feature Description" class="rta form-control overview-description" rows="10">{{description.text.value}}</textarea>
+                <span class="approvalstatus {{description.text.status}}"></span>
+              </div>
+            </div>
+            <div class="form-group mediaUnit">
+              <label>Feature Media</label>
+              <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+              <div class="row media-unit-holder clones-holder">
+                {{#media}}
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" value="{{title.value}}" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" value="{{url.value}}"/>
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" value="{{thumbnail.value}}"/>
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                    <span class="btn btn-default glyphicon glyphicon-trash"></span>
+                  </div>
+                  <span class="approvalstatus {{media.url.status}}"></span>
+                </div>
+                {{/media}}
+                <div class="col-md-10 mu-link-holder cloneable-unit">
+                  <div class="col-md-8">
+                    <input type="text" class="prod-des-mu-link form-control mu-title" placeholder="Media Unit Title" />
+                    <input type="text" class="prod-des-mu-link form-control mu-link" placeholder="Image/Video Link" />
+                    <input type="text" class="prod-des-mu-link preview-link form-control" placeholder="Thumbnail/Video Preview Link" />
+                    <span class="mu-link-warning help-block">
+                    Please enter a link to flixcart.com or youtube.com
+                    </span>
+                  </div>
+                  <div class="col-md-4 op-btns-holder">
+                    <span class="btn btn-default disabled glyphicon glyphicon-eye-open preview" data-html="true" data-placement="right" data-trigger="click" data-content=""></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/features}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+<!--
+[featureset_type3.mustache.html]
+This is the template for entering type 3 feature set
+Title
+Description
+Callout | Callout | Callout
+-->
+<script id="featureset_type3" type="text/html">
+<div class="feature-holder cloneable-unit featureset-unit col-md-12" data-template-type="featureset_type3">
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="featureset featureset_type1 col-md-12 cloneable-unit">
+      <div class="pull-right">
+        <a class="glyphicon glyphicon-arrow-up hidden" href="#"></a>
+        <a class="glyphicon glyphicon-arrow-down hidden" href="#"></a>
+      </div>
+      <div class="overviewUnit">
+        <div class="form-group">
+          <input type="text" placeholder="Featureset Title" class="form-control overview-title"/>
+        </div>
+        <div class="descriptionUnit">
+          <div class="form-group">
+            <textarea type="text" placeholder="Featureset Description" class="rta form-control overview-description" rows="3"></textarea>
+          </div>
+          <div class="form-group feature-holder calloutListHolder">
+            <label>Featureset Callouts</label>
+            <a href="#" class="glyphicon glyphicon-plus-sign pull-right btn btn-primary clone-unit"></a>
+            <div class="col-md-11">
+              <div class="row clones-holder callout-unit-holder calloutList">
+                <div class="callout col-md-4 cloneable-unit">
+                  <div class="col-md-12">
+                    <a class="glyphicon glyphicon-arrow-left increase-priority" href="#" title="Increase Priority"></a>
+                    <a class="glyphicon glyphicon-arrow-right decrease-priority pull-right" href="#" title="Decrease Priority"></a>
+                  </div>
+                  <div class="higlight">
+                    <div class="col-md-6">
+                      <input class="form-control over-large-text input-lg" type="text" placeholder="XX"/>
+                    </div>
+                    <div class="col-md-6" style="padding-top:15px">
+                      <input class="form-control over-small-text input-sm" type="text" placeholder="xx"/>
+                      <a href="#" class="close dismiss-item hidden">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12 subhighlight">
+                    <input class="form-control under-text input-sm" type="text" placeholder="subtext"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mediaUnit hidden">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="featuresUnit">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</script>

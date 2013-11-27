@@ -1,0 +1,517 @@
+{
+  "fsn": "MOBDZBZ9FSEKF2TV",
+  "overview": {
+    "title": {
+      "value": "NEXUS 4 FEATURES",
+      "status": "pending"
+    },
+    "description": {
+      "text": {
+        "value": "With superb performance, and great android 4.2 experience, nexus 4 is a great value for money.",
+        "status": "pending"
+      },
+      "calloutList": []
+    },
+    "media": []
+  },
+  "featureSetList": [
+    {
+      "overview": {
+        "title": {
+          "value": "Performance",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "status": "pending"
+          },
+          "calloutList": [
+            {
+              "highlight": {
+                "text1": {
+                  "value": "1.5",
+                  "status": "pending"
+                },
+                "text2": {
+                  "value": "GHz",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Quad Core",
+                "status": "pending"
+              },
+              "priority": 0
+            },
+            {
+              "highlight": {
+                "text1": {
+                  "value": "2",
+                  "status": "pending"
+                },
+                "text2": {
+                  "value": "GB",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "RAM",
+                "status": "pending"
+              },
+              "priority": 1
+            },
+            {
+              "highlight": {
+                "text1": {
+                  "value": "320",
+                  "status": "pending"
+                },
+                "text2": {
+                  "value": "GPU",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Adreno",
+                "status": "pending"
+              },
+              "priority": 2
+            }
+          ]
+        },
+        "media": []
+      },
+      "priority": 0,
+      "features": [
+        {
+          "priority": 0,
+          "description": {
+            "text": {
+              "value": "Aside from the impressive design and stunning display, the Nexus 4 doesn't scrimp on the hardware it offers either. Nexus 4 comes with a cutting-edge Qualcomm Snapdragon™ S4 processor, to give you the power and speed you need. Zip around the web, experience rich 3D graphics and gameplay, and effortlessly switch between multiple apps without ever missing a beat. With 2GB of RAM and the fastest version of Android ever, Nexus 4 is the snappiest smartphone yet.",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "url": {
+                "value": "http://img6a.flixcart.com/www/promos/new/20131115-113513-lg-mobile-nexus-4-feature-quad-core-performance-mc.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        }
+      ],
+      "templateType": "featureset_type1"
+    },
+    {
+      "overview": {
+        "title": {
+          "value": "Display",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "status": "pending"
+          },
+          "calloutList": [
+            {
+              "highlight": {
+                "text1": {
+                  "value": "4.7\"",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "HD Display",
+                "status": "pending"
+              },
+              "priority": 0
+            },
+            {
+              "highlight": {
+                "text1": {
+                  "value": "320",
+                  "status": "pending"
+                },
+                "text2": {
+                  "value": "ppi",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Screen",
+                "status": "pending"
+              },
+              "priority": 1
+            },
+            {
+              "highlight": {
+                "text1": {
+                  "value": "G2",
+                  "status": "pending"
+                },
+                "text2": {
+                  "value": "touch",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Hybrid Display",
+                "status": "pending"
+              },
+              "priority": 2
+            }
+          ]
+        },
+        "media": []
+      },
+      "priority": 1,
+      "features": [
+        {
+          "priority": 0,
+          "description": {
+            "text": {
+              "value": "Photos and video come to life with stunning clarity and crisp, natural color on the vibrant 1280-by-768 4.7-inch screen. Gently curved glass edges allow your finger to slide smoothly on and off the 320ppi screen. Cutting-edge G2 Touch Hybrid display technology means you feel like you’re touching every pixel - all protected by scratch resistant Corning® Gorilla® Glass 2.",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "url": {
+                "value": "http://img7a.flixcart.com/www/promos/new/20131115-113513-lg-mobile-nexus-4-feature-crisp-display-mc.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        }
+      ],
+      "templateType": "featureset_type1"
+    },
+    {
+      "overview": {
+        "title": {
+          "value": "Camera With PhotoSphere Experience",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "value": "",
+            "status": "pending"
+          },
+          "calloutList": []
+        },
+        "media": []
+      },
+      "priority": 2,
+      "features": [
+        {
+          "title": "8MP Camera",
+          "priority": 0,
+          "description": {
+            "text": {
+              "value": "The nexus 4 comes with a high quality 8MP camera that is capable of taking high resolution images across a spectrum of lighting conditions. The camera sensor is quite powerful and can be user for low light conditions.",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "url": {
+                "value": "http://img7a.flixcart.com/www/promos/new/20131115-113513-lg-mobile-nexus-4-feature-capture-and-share-mc.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        },
+        {
+          "title": "PhotoSphere",
+          "priority": 1,
+          "description": {
+            "text": {
+              "value": "Up, down and all around you, it’s like no camera you’ve ever seen. With Nexus 4, snap pictures in every direction that come together into incredible, immersive photo spheres that put you right inside the scene. View your photo spheres right on your phone, share them on Google+ with your friends and family, or even add them to Google Maps for the world to see",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "url": {
+                "value": "http://img6a.flixcart.com/www/promos/new/20131115-113513-lg-mobile-nexus-4-feature-sphere-camera-mc.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        },
+        {
+          "title": "Edit and Share",
+          "priority": 2,
+          "description": {
+            "text": {
+              "value": "Use the 8-megapixel camera to shoot and share amazing panoramic photos. Touch up your shots with built-in editing tools and share them instantly on Google+™",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "title": {
+                "value": "",
+                "status": "pending"
+              },
+              "url": {
+                "value": "http://img7a.flixcart.com/www/promos/new/20131115-113511-13350m551-13.gif",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        }
+      ],
+      "templateType": "featureset_type2"
+    },
+    {
+      "overview": {
+        "title": {
+          "value": "Great Google Apps & OS",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "value": "Being a Google experience device, the Nexus 4, like all other Nexus devices, is always in line to receive the very latest Android OS updates directly from Google, even the latest v4.3 Jelly Bean version of Android. This makes sure that the Nexus 4 will always remain at the top of the Android chain for a long time to come.",
+            "status": "pending"
+          },
+          "calloutList": []
+        },
+        "media": []
+      },
+      "priority": 3,
+      "features": [
+        {
+          "title": {
+            "value": "Google Now",
+            "status": "pending"
+          },
+          "priority": 0,
+          "description": {
+            "text": {
+              "value": "Nexus 4 comes with the latest version of Google Now to bring you relevant and useful information, before you even ask. Weather, traffic, transit schedules, and even the latest scores come automatically, appearing throughout the day just as you need them. There’s no digging required. It shows you how much traffic to expect before you leave for work, or when the next train will arrive as you’re standing on the platform. Google Now organizes the things you need to know and frees you up to focus on what’s important to you. With the latest version, you’ll see events and concerts nearby, reminders about hotel and flight reservations, and even nearby attractions and popular photo-ops while traveling. All automatically.",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "title": {
+                "value": "",
+                "status": "pending"
+              },
+              "url": {
+                "value": "http://img7a.flixcart.com/www/promos/new/20131115-113513-google-now-cards.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        },
+        {
+          "title": {
+            "value": "Google Maps",
+            "status": "pending"
+          },
+          "priority": 1,
+          "description": {
+            "text": {
+              "value": "Get to the places that you care about quickly and easily with Google Maps™. With turn-by-turn GPS navigation, live traffic info and integrated driving, walking and public transit directions, getting from A to B has never been easier. Search for restaurants, businesses and more near you. Get recommendations from people in your circles and from experts, and access full place reviews and summaries from Zagat editors. 3D Maps and rich satellite imagery give you a more realistic sense of what’s around you, while features like Street View and Indoor Maps make sure that you always know what’s in front of you",
+              "status": "pending"
+            },
+            "calloutList": []
+          },
+          "media": [
+            {
+              "title": {
+                "value": "",
+                "status": "pending"
+              },
+              "url": {
+                "value": "http://img7a.flixcart.com/www/promos/new/20131115-113513-lg-mobile-nexus-4-feature-google-map-mc.jpg",
+                "status": "pending"
+              },
+              "type": "photo",
+              "priority": 0
+            }
+          ]
+        }
+      ],
+      "templateType": "featureset_type2"
+    },
+    {
+      "overview": {
+        "title": {
+          "value": "Sensors",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "value": "The Nexus 4 comes with a range of sensors that will ensure you have the very best experience with the android OS and its extended functions . It sports a Barometer, Proximity Sensor, Gyroscope, Accelerometer and an Ambient Light Sensor for managing the brightness on the devide automatically. The Gyroscope and Accelerometer will be extremely useful for those who want to engage in some motion controlled gaming.",
+            "status": "pending"
+          },
+          "calloutList": [
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img7a.flixcart.com/www/promos/new/20131107-130743-barometer.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Barometer",
+                "status": "pending"
+              },
+              "priority": 0
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img8a.flixcart.com/www/promos/new/20131107-130743-gyroscope.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Gyroscope",
+                "status": "pending"
+              },
+              "priority": 1
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img7a.flixcart.com/www/promos/new/20131107-130743-proximity-sensor.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Proximity Sensor",
+                "status": "pending"
+              },
+              "priority": 2
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img8a.flixcart.com/www/promos/new/20131107-130743-accelerometer.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Accelerometer",
+                "status": "pending"
+              },
+              "priority": 3
+            }
+          ]
+        },
+        "media": []
+      },
+      "priority": 4,
+      "features": [],
+      "templateType": "featureset_type3"
+    },
+    {
+      "overview": {
+        "title": {
+          "value": "Connectivity",
+          "status": "pending"
+        },
+        "description": {
+          "text": {
+            "value": "",
+            "status": "pending"
+          },
+          "calloutList": [
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img6a.flixcart.com/www/promos/new/20131108-134209-bluetooth.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Bluetooth",
+                "status": "pending"
+              },
+              "priority": 0
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img5a.flixcart.com/www/promos/new/20131108-134209-wifi.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Wi-Fi",
+                "status": "pending"
+              },
+              "priority": 1
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img5a.flixcart.com/www/promos/new/20131108-134209-usb.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "USB",
+                "status": "pending"
+              },
+              "priority": 2
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img7a.flixcart.com/www/promos/new/20131108-134209-3g.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "Connectivity",
+                "status": "pending"
+              },
+              "priority": 3
+            },
+            {
+              "highlight": {
+                "icon": {
+                  "value": "http://img7a.flixcart.com/www/promos/new/20131108-134209-nfc.png",
+                  "status": "pending"
+                }
+              },
+              "subHighlight": {
+                "value": "NFC",
+                "status": "pending"
+              },
+              "priority": 4
+            }
+          ]
+        },
+        "media": []
+      },
+      "priority": 5,
+      "features": [],
+      "templateType": "featureset_type3"
+    }
+  ]
+}

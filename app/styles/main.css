@@ -1,0 +1,210 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#top-header{
+    background-color: #005387;
+    height: 55px;
+}
+
+#body-section{
+    margin-top: 60px;
+}
+
+.mu-link-warning{
+    opacity: 0.3;
+}
+.has-warning .mu-link-warning{
+    opacity: 1;
+}
+
+.prvu-img-thumbnail{
+    width: 200px;
+    height: 200px;
+    background-position: 0 0;
+    display:block;
+    cursor: pointer;
+}
+
+.prvu-img-thumbnail:hover,
+.featureset-prvu-holder:hover .prvu-img-thumbnail{
+    background-position: 0 -200px;
+}
+
+.featureset-prvu-holder button span{
+    width: 80%;
+    display: inline-block;
+}
+.callout.cloneable-unit{
+    margin-right: 0;
+}
+.dismiss-item{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: #c00;
+}
+.dismiss-item:hover{
+    color: #c00;
+    opacity: 1;
+}
+#add-feature{
+    margin: 10px;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    z-index: 10000;
+}
+
+.top-right-abs{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 10;
+}
+
+.featureset-holder, .featureset{
+    border-bottom: 1px dotted #6c6c6c;
+    margin-bottom: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.row.clones-holder .cloneable-unit:first-child .increase-priority,
+.row.clones-holder .cloneable-unit:last-child .decrease-priority{
+    opacity: 0;
+}
+
+.increase-priority, .increase-priority:hover,.increase-priority:active
+.decrease-priority, .decrease-priority:hover, .decrease-priority:active{
+    text-decoration: none;
+}
+
+
+.accordion-holder{
+
+}
+    .accordion-pane{
+        border: 1px solid #cbcbcb;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+        .accordion-handle-title{
+            background-color: #e5e5e5;
+            padding: 5px;
+            border-radius: 3px 3px 0 0;
+        }
+        .shown > .accordion-handle-title {
+            border-bottom: 1px solid #cbcbcb;
+        }
+        .accordion-handle-title .collapse-widget{
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            -webkit-font-smoothing: antialiased;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            float: right;
+        }
+
+        .accordion-handle-title .collapse-widget:before{
+            content: "\e114"
+        }
+
+        .shown > .accordion-handle-title .collapse-widget:before{
+            content: "\e113"
+        }
+
+        .accordion-handle-title a{
+            color: #111;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        .accordion-pane-content{
+            background: none;
+            display: none;
+        }
+        .shown > .accordion-pane-content{
+            display: block;
+            overflow: auto;
+        }
+
+        .fs-prvu-template{
+            overflow: auto;
+        }
+
+.higlight,.subhiglight{
+    margin-bottom: 0.3em;
+    overflow: auto;
+    padding-top: 5px;
+}
+.overviewUnit,.fs-prvu-template,.featuresUnit{
+    margin: 10px;
+}
+.feature{
+    border-bottom: 1px dotted #9c9c9c;
+    margin-bottom: 10px;   
+}
+.form-group{
+    position: relative;
+}
+span.approvalstatus{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    float: right;
+    font-size: 1.5em;
+}
+
+span.approvalstatus.approved:before{
+    content:"\e013";
+    color: #0f0;
+}
+
+span.approvalstatus.pending:before{
+    content:"\e023";
+    color:#FFA500;
+}
+
+span.approvalstatus.rejected:before{
+    content:"\e014";
+    color: #f00;
+}
